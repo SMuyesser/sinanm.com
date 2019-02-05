@@ -1,8 +1,8 @@
 // Hides landing animation after it leaves screen
 window.onload = function() {
-	$("img#landing-img").addClass("loaded");
+	$("img#intro-img").addClass("loaded");
 	setTimeout(() => {
-	  $("div#landing-animation").addClass("hidden")
+	  $("div#intro-animation").addClass("hidden")
 	}, 3000);
 };
 
@@ -56,3 +56,8 @@ $("#contact-link").on("click", function() {
 	};
     $(".contact").removeClass("hidden");
 });
+
+$("#toggle").click(function() {
+	$(this).toggleClass('on');
+	$('#resize').toggleClass('active');
+})

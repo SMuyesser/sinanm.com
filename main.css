@@ -23,14 +23,16 @@ a:hover {
   Base Structure
 ******************************************************/
 
-html, body {
-    height: 100%;
+html,
+body {
+    height: 100vh;
     width: 100%;
     min-height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    text-decoration: none;
+    list-style: none;
+    overflow: hidden;
 }
 
 #logo {
@@ -39,6 +41,11 @@ html, body {
     right: 0;
     margin: auto;
     max-height: 80px;
+}
+
+#landing-div {
+    width: 100%;
+    height: 100%;
 }
 
 #landing-half-face {
@@ -50,25 +57,20 @@ html, body {
 }
 
 #landing-div p {
-  font-family: 'Titillium Web', sans-serif;
-  color: #32313F;
-  transform: rotate(90deg);
-  font-size: 100px;
-  position: relative;
-  bottom: 375px;
-  left: 120px;
-}
-
-#is {
-  color: #32313F;
+    font-family: 'Titillium Web', sans-serif;
+    color: #32313F;
+    transform: rotate(90deg);
+    font-size: 100px;
+    position: relative;
+    bottom: 375px;
+    left: 120px;
 }
 
 
 
-
-/******************************************************
+/*****************************************************
   Landing Animation
-******************************************************/
+*****************************************************/
 
 @-webkit-keyframes landing-slide {
     0% {
@@ -110,33 +112,29 @@ html, body {
     }
 }
 
-div#landing-animation {
+#intro-animation {
     height: 100%;
     width: 100%;
     background-color: #32313F;
     position: absolute;
-    z-index: 2;
+    z-index: 999;
     -webkit-animation: landing-slide 3s 2s;
-    /* Safari 4+ */
-    -moz-animation: landing-slide 3s 2s;
-    /* Fx 5+ */
-    -o-animation: landing-slide 3s 2s;
-    /* Opera 12+ */
-    animation: landing-slide 3s 2s;
-    /* IE 10+, Fx 29+ */
+    Safari 4+-moz-animation: landing-slide 3s 2s;
+    Fx 5+-o-animation: landing-slide 3s 2s;
+    Opera 12+animation: landing-slide 3s 2s;
+    IE 10+,
+    Fx 29+
 }
 
-span#landing-img-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-img#landing-img {
+#intro-animation #intro-img {
     max-height: 90px;
     max-width: 90px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     opacity: 0;
     -moz-transition: opacity 3s;
     -webkit-transition: opacity 3s;
@@ -144,22 +142,213 @@ img#landing-img {
     transition: opacity 3s;
 }
 
-img#landing-img.loaded {
+#intro-animation #intro-img.loaded {
     opacity: 1;
 }
 
 
 
-/******************************************************
+/*****************************************************
   Navbar
-******************************************************/
+*****************************************************/
 
-/******************************************************
-  Footer
-******************************************************/
-
-.mastfoot {
+nav {
+    width: 100%;
+    position: static;
+    z-index: 1
 }
+
+#toggle {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 998;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    float: right;
+    transition: all 0.3s ease-out;
+    -webkit-animation: toggle-dance 1s 2s infinite;
+    Safari 4+-moz-animation: toggle-dance 1s 2s infinite;
+    Fx 5+-o-animation: toggle-dance 1s 2s infinite;
+    Opera 12+animation: toggle-dance 1s 2s infinite;
+    IE 10+,
+    Fx 29+
+}
+
+#toggle .span {
+    height: 3px;
+    background: #f28d30;
+    transition: all 0.3s ease-out;
+    backface-visibility: hidden;
+    margin: 5px auto;
+}
+
+#toggle:hover {
+    animation-play-state: paused;
+}
+
+@-webkit-keyframes toggle-dance {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 0px);
+    }
+
+    75% {
+        transform: translate(5px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@-moz-keyframes toggle-dance {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 0px);
+    }
+
+    75% {
+        transform: translate(5px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@-o-keyframes toggle-dance {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 0px);
+    }
+
+    75% {
+        transform: translate(5px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes toggle-dance {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 0px);
+    }
+
+    75% {
+        transform: translate(5px, 0px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+#toggle.on #one {
+    transform: rotate(45deg) translateX(2px) translateY(4px);
+}
+
+#toggle.on #two {
+    opacity: 0;
+}
+
+#toggle.on #three {
+    transform: rotate(-45deg) translateX(8px) translateY(-10px);
+}
+
+#resize {
+    z-index: 1;
+    top: 0px;
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s ease-out;
+    display: table;
+}
+
+#resize #menu {
+    height: 50px;
+    padding: 0;
+    display: table-cell;
+    vertical-align: center;
+}
+
+#resize #menu li {
+    display: block;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 50px;
+    min-height: 50px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: all 0.3s ease-out
+}
+
+#resize li:nth-child(1) {
+    margin-top: 140px;
+}
+
+#resize #menu li a {
+    color: white;
+}
+
+#resize.active {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+@media(max-width: 768) {
+    #toggle {
+        visibility: visible;
+        opacity: 1;
+        margin-top: 6px;
+    }
+
+    nav #brand {
+        margin-left: 18px;
+    }
+}
+
+
+
+/*****************************************************
+  Footer
+*****************************************************/
 
 footer {
     color: #32313F;
