@@ -6,15 +6,8 @@
     display: none;
 }
 
-
-
-/******************************************************
-  Links
-******************************************************/
-a,
-a:focus,
-a:hover {
-    color: #fff;
+* {
+    box-sizing: border-box;
 }
 
 
@@ -35,6 +28,7 @@ body {
     overflow-x: hidden;
 }
 
+
 .row {
     max-width: 100%;
     margin: 0px;
@@ -46,38 +40,53 @@ body {
     right: 0;
     margin: auto;
     max-height: 80px;
-    z-index: 996;
+    z-index: 997;
 }
 
 #landing-div {
     width: 100%;
-    height: 100%;
-    display: flex;
+    height: 100vh;
+    position: static;
 }
 
 #landing-half-face {
-    height: 85vh;
     margin-top: 50px;
-    margin-left: 0px;
-    margin-right: auto;
     display: inline-block;
+    max-width: 50%;
+    max-height: 85vh;
 }
 
-#landing-div p {
+#landing-graphics-container {
+  display: inline-block;
+  margin-right: 0px;
+  width: 150px;
+  max-width: 50%;
+  height: 100vh;
+  position: static;
+
+}
+
+#landing-div span#welcome-text {
     display: inline-block;
     font-family: 'Titillium Web', sans-serif;
     color: #32313F;
-    transform: rotate(90deg) translate(-65%, -36%);
+    writing-mode: vertical-rl;
     font-size: 100px;
-    position: static;
-    z-index: 996;
+    position: absolute;
+    top: 80px;
+    line-height: 80px;  
+    overflow-x: hidden;  
+    z-index: 1;
 }
 
 #line-span-container {
-    align-self: center;
+  display: inline-block;
     width: 300px;
-    z-index: 995;
-    transform: translate(30%, -830%) rotate(-45deg);
+    position: absolute;
+    top: 60%;
+    transform: translate(0px, -50%);
+    right: 0px;
+    z-index: 0;
 }
 
 #line-span-container .line-span {
@@ -86,8 +95,8 @@ body {
 }
 
 #line-one {
-    width: 75%;
-    background: #f28d30;
+  width: 75%;
+  background: #f28d30;
 }
 
 #line-two {
