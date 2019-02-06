@@ -45,12 +45,17 @@ $("#toggle").click(function() {
     $('#sidebar').toggleClass('active');
 })
 
+
+
 function openSlideMenu() {
+    const menuWidth = $(window).width() / 3 + 83;
     $('#toggle').attr('onclick', 'closeSlideMenu()');
-    document.getElementById('sidebar').style.width = '100%';
+    document.getElementById('sidebar').style.width = menuWidth + "px";
+    $('#toggle-wrapper').attr('style', 'box-shadow: none');
 }
 
 function closeSlideMenu() {
     $('#toggle').attr('onclick', 'openSlideMenu()');
     document.getElementById('sidebar').style.width = '0px';
+    $('#toggle-wrapper').attr('style', 'box-shadow: 0px 2px 8px rgba(0,0,0,0.2)');
 }

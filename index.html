@@ -15,12 +15,14 @@
 <body>
     <main id="main w-100">
         <header>
-            <img src="images/S-Circle_Transparent.png" alt="S Logo" class="navbar-brand ml-auto mr-auto" id="logo">
+            <img src="images/S-Circle_Logo.png" alt="S Logo" class="navbar-brand ml-auto mr-auto" id="logo">
             <nav>
-                <div id="toggle" class="closed" onClick="openSlideMenu()">
-                    <div class="toggle-span" id="one"></div>
-                    <div class="toggle-span" id="two"></div>
-                    <div class="toggle-span" id="three"></div>
+                <div class="wrapper" id="toggle-wrapper" style="box-shadow: 0px 2px 8px rgba(0,0,0,0.2)">
+                    <div id="toggle" class="closed" onClick="openSlideMenu()">
+                        <div class="toggle-span" id="one"></div>
+                        <div class="toggle-span" id="two"></div>
+                        <div class="toggle-span" id="three"></div>
+                    </div>
                 </div>
                 <div id="sidebar">
                     <ul id="menu">
@@ -37,20 +39,20 @@
  </div> -->
         <div class="container m-0" id="landing">
             <div class="row justify-content-between">
-                <div class="col-6">
-                    <img src="images/Sinan-Face-Galaxy-Half-Right.png" id="landing-half-face">
-                </div>
-                    <div class="col-4" id="landing-graphics">
-                        <span id="welcome-text">Welcome<span style="color: #f28d30">.</span></span>
-                        <div id="line-span-container">
-                            <div class="line-span" id="line-one"></div>
-                            <div class="line-span" id="line-two"></div>
-                            <div class="line-span" id="line-three"></div>
-                            <div class="line-span" id="line-four"></div>
-                        </div>
+                <div class="col-4" id="landing-graphics">
+                    <span id="welcome-text">Welcome<span style="color: #f28d30">.</span></span>
+                    <div id="line-span-container">
+                        <div class="line-span" id="line-one"></div>
+                        <div class="line-span" id="line-two"></div>
+                        <div class="line-span" id="line-three"></div>
+                        <div class="line-span" id="line-four"></div>
                     </div>
                 </div>
+                <div class="col-8" id="landing-half-face-col">
+                    <img src="images/Sinan-Face-Galaxy-Half-Right-Flipped.png" id="landing-half-face">
+                </div>
             </div>
+        </div>
             <div class="container m-0">
                 <div class="row" id="about-div">
                     <div class="col-12">
