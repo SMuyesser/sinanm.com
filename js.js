@@ -47,7 +47,7 @@ $("#toggle").click(function() {
 
 function openSlideMenu() {
     $('#toggle').attr('onclick', 'closeSlideMenu()');
-    document.getElementById('sidebar').style.width = '200px';
+    document.getElementById('sidebar').style.width = '100%';
 }
 
 function closeSlideMenu() {
