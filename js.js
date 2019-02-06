@@ -6,23 +6,6 @@ window.onload = function() {
 	}, 3000);
 };
 
-// Add click listener event to navbar links
-$(document).ready(function () {
-  $(".navbar-nav li a").click(function(event) {
-    $(".navbar-collapse").collapse('hide');
-  });
-});
-
-// Hides navbar when link is clicked
-$('.navbar .navbar-collapse')
-  .on('hide.bs.collapse', function () {
-    console.log('menu closed');
-    $('ul.navbar-nav').removeClass('active');
-  })
-  .on('show.bs.collapse', function () {
-    console.log('menu open');
-    $('ul.navbar-nav').addClass('active');
-  });
 
 // About Link
 $("#about-link").on("click", function() {
@@ -59,5 +42,17 @@ $("#contact-link").on("click", function() {
 
 $("#toggle").click(function() {
 	$(this).toggleClass('on');
-	$('#resize').toggleClass('active');
+	$('#sidebar').toggleClass('active');
 })
+
+function openSlideMenu() {
+	$('#toggle').attr('onclick', 'closeSlideMenu()');
+	document.getElementById('sidebar').style.width= '200px';
+	document.getElementById('main').style.marginRight= '200px';
+}
+
+function closeSlideMenu() {
+	$('#toggle').attr('onclick', 'openSlideMenu()');
+	document.getElementById('sidebar').style.width= '0px';
+	document.getElementById('main').style.marginRight= '0px';
+}
