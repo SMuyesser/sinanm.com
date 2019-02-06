@@ -32,7 +32,12 @@ body {
     padding: 0px;
     text-decoration: none;
     list-style: none;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.row {
+    max-width: 100%;
+    margin: 0px;
 }
 
 #logo {
@@ -41,11 +46,13 @@ body {
     right: 0;
     margin: auto;
     max-height: 80px;
+    z-index: 996;
 }
 
 #landing-div {
     width: 100%;
     height: 100%;
+    display: flex;
 }
 
 #landing-half-face {
@@ -57,55 +64,88 @@ body {
 }
 
 #landing-div p {
+    display: inline-block;
     font-family: 'Titillium Web', sans-serif;
     color: #32313F;
-    transform: rotate(90deg);
+    transform: rotate(90deg) translate(-65%, -36%);
     font-size: 100px;
-    position: fixed;
-    bottom: 175px;
-    right: -175px;
+    position: static;
+    z-index: 996;
 }
 
+#line-span-container {
+    align-self: center;
+    width: 300px;
+    z-index: 995;
+    transform: translate(30%, -830%) rotate(-45deg);
+}
+
+#line-span-container .line-span {
+    height: 3px;
+    margin: 8px 0px 8px auto;
+}
+
+#line-one {
+    width: 75%;
+    background: #f28d30;
+}
+
+#line-two {
+    width: 90%;
+    background: #32313f;
+}
+
+#line-three {
+    width: 80%;
+    background: #f28d30;
+
+}
+
+#line-four {
+    width: 100%;
+    background: #f28d30;
+
+}
 
 
 /*****************************************************
   Intro Animation
 *****************************************************/
 
-/* #intro-animation {
-    height: 100%;
-    width: 100%;
-    background-color: #32313F;
-    position: absolute;
-    z-index: 999;
-    -webkit-animation: landing-slide 3s 2s;
-    Safari 4+-moz-animation: landing-slide 3s 2s;
-    Fx 5+-o-animation: landing-slide 3s 2s;
-    Opera 12+animation: landing-slide 3s 2s;
-    IE 10+,
-    Fx 29+
+/*  #intro-animation {
+   height: 100%;
+   width: 100%;
+   background-color: #32313F;
+   position: absolute;
+   z-index: 999;
+   -webkit-animation: landing-slide 3s 2s;
+   Safari 4+-moz-animation: landing-slide 3s 2s;
+   Fx 5+-o-animation: landing-slide 3s 2s;
+   Opera 12+animation: landing-slide 3s 2s;
+   IE 10+,
+   Fx 29+
 }
 
 #intro-animation #intro-img {
-    max-height: 90px;
-    max-width: 90px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    opacity: 0;
-    -moz-transition: opacity 3s;
-    -webkit-transition: opacity 3s;
-    -o-transition: opacity 3s;
-    transition: opacity 3s;
+   max-height: 90px;
+   max-width: 90px;
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   opacity: 0;
+   -moz-transition: opacity 3s;
+   -webkit-transition: opacity 3s;
+   -o-transition: opacity 3s;
+   transition: opacity 3s;
 }
 
 #intro-animation #intro-img.loaded {
-    opacity: 1;
-} */
-
+   opacity: 1;
+} 
+*/
 
 
 /*****************************************************
@@ -136,7 +176,7 @@ nav {
     Fx 29+
 }
 
-#toggle .span {
+#toggle .toggle-span {
     height: 3px;
     background: #f28d30;
     transition: all 0.3s ease-out;
@@ -195,11 +235,11 @@ nav {
 #sidebar #menu li a {
     padding: 20px 0;
     transition: all 0.3s ease-out;
-    color: #f28d30;
+    color: #fff;
 }
 
 #sidebar #menu li a:hover {
-    color: #fff;
+    color: #f28d30;
     text-decoration: none;
     font-size: 25px;
     transition: all 0.3s ease-in;
