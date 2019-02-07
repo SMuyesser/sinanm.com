@@ -27,8 +27,6 @@ html,
 body {
     height: 100vh;
     width: 100vw;
-    min-width: 320px;
-    min-height: 568px;
     margin: 0px;
     padding: 0px;
     text-decoration: none;
@@ -94,8 +92,8 @@ body {
 
 #toggle-wrapper {
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 7px;
+    left: 15px;
     height: 40px;
     width: 40px;
     background-color: #f28d30;
@@ -107,7 +105,6 @@ body {
 }
 
 #toggle {
- 
     z-index: 999;
     width: 30px;
     height: 30px;
@@ -117,19 +114,14 @@ body {
     -moz-animation: breathing 3s ease-out infinite;
     -o-animation: breathing 3s ease-out infinite;
     animation: breathing 3s ease-out infinite;
-
 }
 
 #toggle .toggle-span {
     height: 3px;
     background: #32313f;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
     backface-visibility: hidden;
     margin: 5px auto;
-}
-
-#toggle:hover {
-    animation-play-state: paused;
 }
 
 #toggle.on #one {
@@ -193,6 +185,19 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+#menu-text {
+    font-family: 'Titillium Web', sans-serif;
+    color: #32313F;
+    writing-mode: vertical-lr;
+    font-size: 100px;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    line-height: 80px;
+    alignment-baseline: center;
+}
+
 @media(max-width: 768) {
     #toggle {
         visibility: visible;
@@ -231,18 +236,16 @@ body {
 #line-span-container {
     position: absolute;
     left: 0;
+    top: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-content: flex-start;
-    align-items: flex-start;
     width: 300px;
     z-index: 0;
 }
 
 #line-span-container .line-span {
     height: 3px;
-    margin: 8px 0px 8px auto;
+    margin: 7px 0px;
 }
 
 #line-one {

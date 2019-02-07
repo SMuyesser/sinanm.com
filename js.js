@@ -51,7 +51,8 @@ function openSlideMenu() {
     const menuWidth = $(window).width() / 3 + 83;
     $('#toggle').attr('onclick', 'closeSlideMenu()');
     document.getElementById('sidebar').style.width = menuWidth + "px";
-    $('#toggle-wrapper').attr('style', 'box-shadow: none');
+    $('#toggle-wrapper').attr('style', 'box-shadow: none')
+    					.attr('style', 'left: 0px');
 }
 
 function closeSlideMenu() {
