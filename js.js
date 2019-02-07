@@ -45,8 +45,6 @@ $("#toggle").click(function() {
     $('#sidebar').toggleClass('active');
 })
 
-
-
 function openSlideMenu() {
     const menuWidth = $(window).width() / 3 + 83;
     $('#toggle').attr('onclick', 'closeSlideMenu()');

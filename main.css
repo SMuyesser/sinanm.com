@@ -34,6 +34,60 @@ body {
     overflow-x: hidden;
 }
 
+.container {
+  height: 100vh;
+}
+
+.title-text {
+      height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.vertical-text {
+      font-family: 'Titillium Web', sans-serif;
+    color: #32313F;
+    writing-mode: vertical-lr;
+    font-size: 100px;
+    z-index: 1;
+}
+
+#line-span-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    z-index: 0;
+}
+
+#line-span-container .line-span {
+    height: 3px;
+    margin: 7px 0px;
+}
+
+#line-one {
+    width: 75%;
+    background: #f28d30;
+}
+
+#line-two {
+    width: 90%;
+    background: #32313f;
+}
+
+#line-three {
+    width: 80%;
+    background: #f28d30;
+}
+
+#line-four {
+    width: 100%;
+    background: #f28d30;
+}
 
 
 /*****************************************************
@@ -215,57 +269,7 @@ body {
 #landing {
     width: 100%;
     height: 100vh;
-}
-
-#landing-graphics {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-}
-
-#welcome-text {
-    font-family: 'Titillium Web', sans-serif;
-    color: #32313F;
-    writing-mode: vertical-lr;
-    font-size: 100px;
-    z-index: 1;
-}
-
-#line-span-container {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    z-index: 0;
-}
-
-#line-span-container .line-span {
-    height: 3px;
-    margin: 7px 0px;
-}
-
-#line-one {
-    width: 75%;
-    background: #f28d30;
-}
-
-#line-two {
-    width: 90%;
-    background: #32313f;
-}
-
-#line-three {
-    width: 80%;
-    background: #f28d30;
-}
-
-#line-four {
-    width: 100%;
-    background: #f28d30;
+    margin-bottom: 15px;
 }
 
 #landing-half-face-col {
@@ -280,6 +284,15 @@ body {
     max-height: 95vh;
 }
 
+
+
+/*****************************************************
+  Portfolio
+*****************************************************/
+
+#portfolio {
+  background-color: #DDDDDD;
+}
 
 
 /*****************************************************
