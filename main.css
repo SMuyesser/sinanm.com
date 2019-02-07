@@ -198,7 +198,7 @@ body {
     top: 0px;
     left: -83px;
     background-color: #f28d30;
-    transition: all 1s ease-in-out;
+    transition: all .5s ease-in-out;
     display: table;
     border-right: 1px solid #32313f;
 }
@@ -290,8 +290,23 @@ body {
   Portfolio
 *****************************************************/
 
-#portfolio {
-  background-color: #DDDDDD;
+#gallery-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#gallery {
+  margin-top: 64px;
+}
+
+.gallery-item {
+  display: inline-block;
+  height: 110px;
+  width: 180px;
+  margin-bottom: 5px;
+  background: #DDD;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.2)
 }
 
 
