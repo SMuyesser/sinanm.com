@@ -318,7 +318,7 @@ body {
   align-items: center;
   background-color: rgba(50,49,63,0.9);
   transition: all .5s ease-in-out;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .gallery-item-inner:hover {
@@ -332,7 +332,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  flex-wrap: nowrap;
     transition: all .5s ease-in-out;
 
 }
