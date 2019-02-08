@@ -6,40 +6,6 @@ window.onload = function() {
     }, 3000);
 };
 
-
-// About Link
-$("#about-link").on("click", function() {
-    if (!$(".portfolio").hasClass("hidden")) {
-        $(".portfolio").addClass("hidden");
-    };
-    if (!$(".contact").hasClass("hidden")) {
-        $(".contact").addClass("hidden");
-    };
-    $(".about").removeClass("hidden");
-});
-
-// Portfolio Link
-$("#portfolio-link").on("click", function() {
-    if (!$(".about").hasClass("hidden")) {
-        $(".about").addClass("hidden");
-    };
-    if (!$(".contact").hasClass("hidden")) {
-        $(".contact").addClass("hidden");
-    };
-    $(".portfolio").removeClass("hidden");
-});
-
-//Contact Link
-$("#contact-link").on("click", function() {
-    if (!$(".about").hasClass("hidden")) {
-        $(".about").addClass("hidden");
-    };
-    if (!$(".portfolio").hasClass("hidden")) {
-        $(".portfolio").addClass("hidden");
-    };
-    $(".contact").removeClass("hidden");
-});
-
 $("#toggle").click(function() {
     $(this).toggleClass('on');
     $('#sidebar').toggleClass('active');
@@ -67,9 +33,5 @@ $( "div.gallery-item-inner" )
     $( this ).find( ".gallery-item-title" ).attr('style', 'width: 0');
   });
 
-  $(function() {
-    while( $('#ff').height() > $('#ff-fit-in').height() ) {
-        $('ff-fit-in').css('font-size', (parseInt($('ff-fit-in').css('font-size')) - 1) + "px" );
-    }
-});
+
 
