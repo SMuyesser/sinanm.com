@@ -25,6 +25,13 @@ function closeSlideMenu() {
     $('#toggle-wrapper').attr('style', 'box-shadow: 0px 2px 8px rgba(0,0,0,0.2)');
 };
 
+function closeSlideMenuWithLink() {
+	$('#toggle').attr('onclick', 'openSlideMenu()').removeClass('on').addClass('off');
+    $('#sidebar').removeClass('active');
+    document.getElementById('sidebar').style.width = '0px';
+    $('#toggle-wrapper').attr('style', 'box-shadow: 0px 2px 8px rgba(0,0,0,0.2)');
+}
+
 $( "div.gallery-item-inner" )
   .mouseenter(function() {
     $( this ).find( ".gallery-item-title" ).attr('style', 'width: 25%');
@@ -46,9 +53,9 @@ $('.gallery-item').on('click', function() {
 	if ($(this).is('#gallery-item-4')) {
 		$('#the-movie-game').removeClass('hidden');
 	}
-})
+});
 
 $('.full-screen-gallery-item button').on('click', function() {
 	$(this).parent().parent().addClass('hidden');
-})
+});
 
