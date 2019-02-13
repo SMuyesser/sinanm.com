@@ -3,7 +3,7 @@
 ******************************************************/
 
 .hidden {
-    display: none;
+    display: none!important;
 }
 
 * {
@@ -235,7 +235,6 @@ body {
 #sidebar #menu li a:hover {
     color: #32313f;
     text-decoration: none;
-    font-size: 25px;
     transition: all 0.3s ease-in-out;
 }
 
@@ -352,13 +351,65 @@ body {
 .full-screen-gallery-item {
   height: 100vh;
   width: 100%;
-  background-color: rgba(50,49,63,0.9);
+  background-color: #f28d30;
   z-index: 999;
   position: absolute;
   top: 0;
   left: 0;
   transition: all .5s ease-in-out;
+  display: flex;
+  color: #32313F;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  flex-direction: column;
+  overflow-y: auto;
 }
+
+.full-screen-gallery-item button {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: auto;
+  background: none;
+  border: none;
+}
+
+.full-screen-gallery-item h1 {
+  width: 100%;
+  text-align: center;
+  margin-top: 45px;
+}
+
+.full-screen-gallery-item p.short-info {
+  margin-bottom: 0px;
+  width: 100%;
+}
+
+.full-screen-gallery-item img.app-img {
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.full-screen-gallery-item p.long-info {
+  width: 100%;
+}
+
+.full-screen-gallery-item p.live-code-links {
+  width: 100%;
+}
+
+.full-screen-gallery-item p.made-with-title {
+  width: 100%;
+}
+
+.full-screen-gallery-item p.tech-list {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
 
 
 /*****************************************************
