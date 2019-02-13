@@ -33,5 +33,7 @@ $( "div.gallery-item-inner" )
     $( this ).find( ".gallery-item-title" ).attr('style', 'width: 0');
   });
 
-
+function openGalleryItem() {
+	console.log($(this));
+}
 
