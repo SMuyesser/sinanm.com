@@ -33,7 +33,22 @@ $( "div.gallery-item-inner" )
     $( this ).find( ".gallery-item-title" ).attr('style', 'width: 0');
   });
 
-function openGalleryItem() {
-	console.log($(this));
-}
+$('.gallery-item').on('click', function() {
+	if ($(this).is('#gallery-item-1')) {
+		$('#hungry').removeClass('hidden');
+	} 
+	if ($(this).is('#gallery-item-2')) {
+		$('#the-video-shelf').removeClass('hidden');
+	} 
+	if ($(this).is('#gallery-item-3')) {
+		$('#fifa-formations').removeClass('hidden');
+	} 
+	if ($(this).is('#gallery-item-4')) {
+		$('#the-movie-game').removeClass('hidden');
+	}
+})
+
+$('.full-screen-gallery-item button').on('click', function() {
+	$(this).parent().parent().addClass('hidden');
+})
 
