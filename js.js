@@ -32,13 +32,13 @@ function closeSlideMenuWithLink() {
     $('#toggle-wrapper').attr('style', 'box-shadow: 0px 2px 8px rgba(0,0,0,0.2)');
 }
 
-$( "div.gallery-item-inner" )
+/*$( "div.gallery-item-inner" )
   .mouseenter(function() {
     $( this ).find( ".gallery-item-title" ).attr('style', 'width: 25%');
   })
   .mouseleave(function() {
     $( this ).find( ".gallery-item-title" ).attr('style', 'width: 0');
-  });
+  });*/
 
 $('.gallery-item').on('click', function() {
 	if ($(this).is('#gallery-item-1')) {
@@ -58,4 +58,3 @@ $('.gallery-item').on('click', function() {
 $('.full-screen-gallery-item button').on('click', function() {
 	$(this).parent().parent().addClass('hidden');
 });
-
