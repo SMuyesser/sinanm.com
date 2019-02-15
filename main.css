@@ -293,6 +293,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 #gallery {
@@ -412,6 +413,10 @@ body {
   About
 *****************************************************/
 
+#about .row {
+  height: 100%;
+}
+
 #about-title {
     padding-right: 0px;
 }
@@ -423,11 +428,12 @@ body {
     margin-top: 75px;
     margin-bottom: 15px;
     padding-left: 0px;
+    max-height: 80vh;
 }
 
 #about-info-container {
     width: 100%;
-    height: 475px;
+    height: 100%;
     background-color: #32313F;
     display: inline-block;
     padding: 5px;
@@ -446,13 +452,14 @@ body {
     align-items: center;
     background-color: #f28d30;
     font-size: 20px;
+    overflow-y: hidden;
 }
 
 #about-headers p {
     writing-mode: vertical-lr;
     background-color: #f28d30;
     color: #32313F;
-    padding: 20px 2px;
+    padding: 18px 2px;
     font-family: 'Titillium Web', sans-serif;
     margin: 0px;
     border-bottom: 1px solid #32313F;
