@@ -429,6 +429,10 @@ body {
     width: 100%;
 }
 
+.sr-only {
+  background-color: black;
+}
+
 
 ul#about-headers {
     padding: 0px;
