@@ -427,38 +427,59 @@ body {
     padding-left: 0px;
     max-height: 80vh;
     width: 100%;
+    z-index: 2;
 }
 
-.sr-only {
-  background-color: black;
+ol.carousel-indicators {
+  margin-bottom: 0px;
 }
 
-
-ul#about-headers {
-    padding: 0px;
-    display: flex;
-    justify-content: space-around;
-    font-size: 15px;
-    width: 100%;
-    list-style: none;
-    margin-bottom: 0px;
-    background-color: #f28d30;
-
+.carousel-indicators li {
+  background-color: #999;
+  background-color: rgba(70,70,70,.25);
 }
 
-#about-headers li {
-    display: inline-block;
-    background-color: #f28d30;
-    color: #32313F;
-    padding: 2px, 5px;
-    font-family: 'Titillium Web', sans-serif;
-    margin: 0px;
-    border-right: 1px solid #32313F;
-    text-align: center;
+.carousel-indicators .active {
+  background-color: #444;
 }
 
-#about-headers li#interests-header {
-    border-right: none;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 30px;
+  font-weight: bolder;
+  color: red;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 30px;
+  color: red;
+  z-index: 998;
+    font-weight: bolder;
+}
+
+.carousel-inner {
+  text-align: center;
+  padding: 0px 25px;
+}
+
+.carousel-item {
+  margin-bottom: 10px;
+}
+
+.carousel-item p {
+  font-size: 12px;
+  padding-bottom: 10px;
 }
 
 #about-info-container {
