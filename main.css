@@ -27,19 +27,23 @@ html,
 body {
     height: 100vh;
     width: 100vw;
+    min-height: 568px;
+    min-width: 320px;
     margin: 0px;
     padding: 0px;
     text-decoration: none;
     list-style: none;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .container {
     height: 100vh;
+    min-height: 568px;
 }
 
 .title-text {
     height: 100vh;
+    min-height: 568px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -194,6 +198,7 @@ body {
     z-index: 997;
     width: 0px;
     height: 100%;
+    min-height: 568px;
     position: fixed;
     top: 0px;
     left: -83px;
@@ -281,8 +286,29 @@ body {
     display: inline-block;
     z-index: 1;
     max-height: 95vh;
+    min-height: 540px;
 }
 
+.scroll-link-container {
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-link-container a {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-link-container a img {
+  width: 30px;
+  height: 30px;
+}
 
 
 /*****************************************************
@@ -374,6 +400,11 @@ body {
     border: none;
 }
 
+.full-screen-gallery-item button img {
+  height: 20px;
+  width: 20px;
+}
+
 .full-screen-gallery-item h1 {
     width: 100%;
     text-align: center;
@@ -419,13 +450,9 @@ body {
 
 #about-content-col {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 75px;
-    margin-bottom: 15px;
     padding-left: 0px;
-    max-height: 80vh;
     width: 100%;
     z-index: 2;
 }
@@ -435,12 +462,11 @@ ol.carousel-indicators {
 }
 
 .carousel-indicators li {
-  background-color: #999;
-  background-color: rgba(70,70,70,.25);
+  background-color: rgba(242, 141, 48, 0.3);
 }
 
 .carousel-indicators .active {
-  background-color: #444;
+  background-color: #F28D30;
 }
 
 .carousel-control-prev-icon,
@@ -457,29 +483,39 @@ ol.carousel-indicators {
   content: '>';
   font-size: 30px;
   font-weight: bolder;
-  color: red;
+  color: #F28D30;
 }
 
 .carousel-control-prev-icon:after {
   content: '<';
   font-size: 30px;
-  color: red;
+  color: #F28D30;
   z-index: 998;
     font-weight: bolder;
 }
 
 .carousel-inner {
   text-align: center;
-  padding: 0px 25px;
+  padding: 5px 25px 0px 25px;
+  background-color: #32313F;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2)
 }
 
 .carousel-item {
   margin-bottom: 10px;
 }
 
+.carousel-item h3 {
+  color: #F28D30;
+      font-family: 'Titillium Web', sans-serif;
+      margin-bottom: 5px;
+
+}
+
 .carousel-item p {
   font-size: 12px;
   padding-bottom: 10px;
+  color: white;
 }
 
 #about-info-container {
