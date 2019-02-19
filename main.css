@@ -33,7 +33,7 @@ body {
     padding: 0px;
     text-decoration: none;
     list-style: none;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container {
@@ -290,8 +290,8 @@ body {
 }
 
 .scroll-link-container {
-  position: absolute;
-  bottom: 5px;
+  position: relative;
+  bottom: 35px;
   width: 100%;
   z-index: 3;
   display: flex;
