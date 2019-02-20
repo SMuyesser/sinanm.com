@@ -93,6 +93,16 @@ body {
     background: #f28d30;
 }
 
+.carousel-control-prev, .carousel-control-next {
+  z-index: 5;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+  background-color: red;
+  position: absolute;
+  bottom: 5px;
+}
+
 
 /*****************************************************
   Intro Animation
@@ -273,7 +283,6 @@ body {
 #landing {
     width: 100%;
     height: 100vh;
-    margin-bottom: 15px;
 }
 
 #landing-half-face-col {
@@ -285,30 +294,10 @@ body {
 #landing-half-face {
     display: inline-block;
     z-index: 1;
-    max-height: 95vh;
-    min-height: 540px;
+    max-height: 90vh;
+    min-height: 510px;
 }
 
-.scroll-link-container {
-    position: relative;
-    bottom: 35px;
-    width: 100%;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.scroll-link-container a {
-    width: 40px;
-    display: flex;
-    justify-content: center;
-}
-
-.scroll-link-container a img {
-    width: 30px;
-    height: 30px;
-}
 
 
 /*****************************************************
@@ -455,6 +444,7 @@ body {
     padding-left: 0px;
     width: 100%;
     z-index: 2;
+    margin-top: 35px;
 }
 
 .accordion {
@@ -543,12 +533,13 @@ body {
 }
 
 
+
 /*****************************************************
   Contact
 *****************************************************/
 
 #contact {
-    height: 95vh;
+    height: 100vh;
 }
 
 #contact-col {
@@ -583,21 +574,24 @@ ul.contact-info {
 }
 
 
+
 /*****************************************************
   Footer
 *****************************************************/
 
 footer {
-    height: 5vh;
     color: #32313f;
     font-size: 12px;
     text-align: center;
-    background-color: #f28d30;
     padding: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 0px;
 }
+
+
 
 /******************************************************
     Keyframes
