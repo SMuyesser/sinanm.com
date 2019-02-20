@@ -54,7 +54,7 @@
                     <img src="images/Sinan-Face-Galaxy-Half-Right-Flipped.png" id="landing-half-face">
                 </div>
                 <div class="scroll-link-container">
-                <a href="#portfolio" id="landing-scroll"><img src="images/scroll-down.png"></a>
+                    <a href="#portfolio" id="landing-scroll"><img src="images/scroll-down.png"></a>
                 </div>
             </div>
         </div> <!-- End Landing Container -->
@@ -171,64 +171,91 @@
                     </div>
                 </div>
                 <div class="col-8" id="about-content-col">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
-                        <ol class="carousel-indicators" >
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <h3 class="about-header">Background</h3>
-                                <p>I am a full stack developer located in Santa Monica, California experienced in JavaScript, React, Express, Node, MongoDB, and more with a background in sales, operations, and customer service. I enjoy coding because it allows me to create something from nothing. I am passionate about designing, learning new frameworks, libraries, languages, and building apps to grow as a developer.</p>
+                    <div class="accordion" id="about-accordion">
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Background
+                                    </button>
+                                </h5>
                             </div>
-                            <div class="carousel-item">
-                                <h3 class="about-header">Skills</h3>
-                                <div id="skills-wrapper">
-                                   <ul id="skills1">
-                                       <li>HTML5</li>
-                                       <li>CSS3</li>
-                                       <li>JavaScript</li>
-                                       <li>Bootstrap</li>
-                                       <li>jQuery</li>
-                                       <li>React.js</li>
-                                       <li>Redux</li>
-                                       <li>Node</li>
-                                       <li>MongoDB</li>
-                                       <li>RESTful APIs</li>
-                                   </ul>
-                                   <ul id="skills2">
-                                       <li>Express</li>
-                                       <li>Passport.js</li>
-                                       <li>bcrypt</li>
-                                       <li>Git</li>
-                                       <li>npm</li>
-                                       <li>Mocha</li>
-                                       <li>Chai</li>
-                                       <li>Jest</li>
-                                       <li>Enzyme</li>
-                                       <li>Travic CI</li>
-                                    </ul>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#about-accordion">
+                                <div class="card-body">
+                                    <p>I am a full stack developer located in Santa Monica, California experienced in JavaScript, React, Express, Node, MongoDB, and more with a background in sales, operations, and customer service. I enjoy coding because it allows me to create something from nothing. I am passionate about designing, learning frameworks, libraries, languages, and building apps to grow as a developer.</p>
                                 </div>
-                                    <ul id="skills3">
-                                       <li>Mobile-First Development</li>
-                                       <li>Responsive Web Design</li>
-                                       <li>Cross-Browser Compatibility</li>
-                                   </ul>
-                            </div>
-                            <div class="carousel-item">
-                                <h3 class="about-header" id="interests-header">Interests</h3>
-                                   <p>I am a full stack developer located in Santa Monica, California experienced in JavaScript, React, Express, Node, MongoDB, and more with a background in sales, operations, and customer service. I enjoy coding because it allows me to create something from nothing, and I love the rewarding feeling of figuring out solutions to problems involving client and server communication, learning a new framework or library, and anything that increases my knowledge of code.</p>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        Skills
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#about-accordion">
+                                <div class="card-body">
+                                    <div id="skills-wrapper">
+                                    <ul id="skills1">
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                        <li>JavaScript</li>
+                                        <li>Bootstrap</li>
+                                        <li>jQuery</li>
+                                        <li>React.js</li>
+                                        <li>Redux</li>
+                                        <li>Node</li>
+                                        <li>MongoDB</li>
+                                        <li>RESTful APIs</li>
+                                    </ul>
+                                    <ul id="skills2">
+                                        <li>Express</li>
+                                        <li>Passport.js</li>
+                                        <li>bcrypt</li>
+                                        <li>Git</li>
+                                        <li>npm</li>
+                                        <li>Mocha</li>
+                                        <li>Chai</li>
+                                        <li>Jest</li>
+                                        <li>Enzyme</li>
+                                        <li>Travic CI</li>
+                                    </ul>
+                                </div>
+                                <ul id="skills3">
+                                    <li>Mobile-First Development</li>
+                                    <li>Responsive Web Design</li>
+                                    <li>Cross-Browser Compatibility</li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                    <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        Interests
+                                    </button>
+                                </h5>
+                            </div>
+                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#about-accordion">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>Soccer</li>
+                                        <li>Golf</li>
+                                        <li>Movies & TV</li>
+                                        <li>Fitness</li>
+                                        <li>Gaming</li>
+                                        <li>Cooking</li>
+                                        <li>Nature</li>
+                                        <li>Football</li>
+                                        <li>Meditation</li>
+                                        <li>Travel</li>
+                                        <li>Volleyball</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
