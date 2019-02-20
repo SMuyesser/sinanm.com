@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <a href="#landing"><img src="images/S-Circle_Logo.png" alt="S Logo" class="navbar-brand ml-auto mr-auto" id="logo"></a>
+        <a data-target="#carouselExampleControls" data-slide-to="0"><img src="images/S-Circle_Logo.png" alt="S Logo" class="navbar-brand ml-auto mr-auto" id="logo"></a>
         <nav>
             <div id="toggle-wrapper" style="box-shadow: 0px 2px 8px rgba(0,0,0,0.2)">
                 <div id="toggle" class="closed" onClick="openSlideMenu()">
@@ -25,88 +25,235 @@
             </div>
             <div id="sidebar">
                 <ul id="menu">
-                    <li><a href="#landing" onClick="closeSlideMenuWithLink()">Home</a></li>
-                    <li><a href="#portfolio" onClick="closeSlideMenuWithLink()">Portfolio</a></li>
-                    <li><a href="#about" onClick="closeSlideMenuWithLink()">About</a></li>
-                    <li><a href="#contact" onClick="closeSlideMenuWithLink()">Contact</a></li>
+                    <li data-target="#carouselExampleControls" data-slide-to="0" class="active"><a href="#landing" onClick="closeSlideMenuWithLink()">Home</a></li>
+                    <li data-target="#carouselExampleControls" data-slide-to="1"><a href="#portfolio" onClick="closeSlideMenuWithLink()">Portfolio</a></li>
+                    <li data-target="#carouselExampleControls" data-slide-to="2"><a href="#about" onClick="closeSlideMenuWithLink()">About</a></li>
+                    <li data-target="#carouselExampleControls" data-slide-to="3"><a href="#contact" onClick="closeSlideMenuWithLink()">Contact</a></li>
                 </ul>
                 <span id="menu-text">Menu<span style="color: #fff">.</span></span>
             </div>
         </nav>
     </header>
-    <main id="main w-100">
-        <!--        <div id="intro-animation">
+            <!--        <div id="intro-animation">
      <img src="images/S-Circle_Logo.png" alt="S" id="intro-img">
  </div> -->
-        <div class="container" id="landing">
-            <div class="row justify-content-between">
-                <div class="col-4 title-text" id="landing-title">
-                    <span class="vertical-text">Welcome<span style="color: #f28d30">.</span></span>
-                    <div id="line-span-container">
-                        <div class="line-span" id="line-one">
+    <main id="main w-100">
+        <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="container" id="landing">
+                        <div class="row justify-content-between">
+                            <div class="col-4 title-text" id="landing-title">
+                                <span class="vertical-text">Welcome<span style="color: #f28d30">.</span></span>
+                                <div id="line-span-container">
+                                    <div class="line-span" id="line-one">
+                                    </div>
+                                    <div class="line-span" id="line-two"></div>
+                                    <div class="line-span" id="line-three"></div>
+                                    <div class="line-span" id="line-four"></div>
+                                </div>
+                            </div>
+                            <div class="col-8" id="landing-half-face-col">
+                                <img src="images/Sinan-Face-Galaxy-Half-Right-Flipped.png" id="landing-half-face">
+                            </div>
+                            <div class="scroll-link-container">
+                                <a href="#portfolio" id="landing-scroll"><img src="images/scroll-down.png"></a>
+                            </div>
                         </div>
-                        <div class="line-span" id="line-two"></div>
-                        <div class="line-span" id="line-three"></div>
-                        <div class="line-span" id="line-four"></div>
-                    </div>
+                    </div> <!-- End Landing Container -->
                 </div>
-                <div class="col-8" id="landing-half-face-col">
-                    <img src="images/Sinan-Face-Galaxy-Half-Right-Flipped.png" id="landing-half-face">
+                <div class="carousel-item">
+                    <div class="container m-0" id="portfolio">
+                        <div class="row">
+                            <div class="col-4 title-text" id="portfolio-title">
+                                <span class="vertical-text">Portfolio<span style="color: #f28d30">.</span></span>
+                                <div id="line-span-container">
+                                    <div class="line-span" id="line-four"></div>
+                                    <div class="line-span" id="line-three"></div>
+                                    <div class="line-span" id="line-two"></div>
+                                    <div class="line-span" id="line-one"></div>
+                                </div>
+                            </div>
+                            <div class="col-8" id="gallery-col">
+                                <div id="gallery">
+                                    <div class="gallery-item" id="gallery-item-1">
+                                        <div class="gallery-item-inner">
+                                            <img src="images/pizza.png">
+                                            <div class="gallery-item-title">
+                                                <span class="gallery-vertical-text">Hungry?</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item" id="gallery-item-2">
+                                        <div class="gallery-item-inner">
+                                            <img src="images/videographer.png">
+                                            <div class="gallery-item-title">
+                                                <span class="gallery-vertical-text">The Video Shelf?</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item" id="gallery-item-3">
+                                        <div class="gallery-item-inner">
+                                            <img src="images/gaming-controller.png">
+                                            <div class="gallery-item-title">
+                                                <span class="gallery-vertical-text">FIFA Formations</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="gallery-item" id="gallery-item-4">
+                                        <div class="gallery-item-inner">
+                                            <img src="images/andaction.png">
+                                            <div class="gallery-item-title">
+                                                <span class="gallery-vertical-text">The Movie Game</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End Portfolio Container -->
                 </div>
-                <div class="scroll-link-container">
-                    <a href="#portfolio" id="landing-scroll"><img src="images/scroll-down.png"></a>
+                <div class="carousel-item">
+                    <div class="container" id="about">
+                        <div class="row">
+                            <div class="col-4 title-text" id="about-title">
+                                <span class="vertical-text">About<span style="color: #f28d30">.</span></span>
+                                <div id="line-span-container">
+                                    <div class="line-span" id="line-three"></div>
+                                    <div class="line-span" id="line-one"></div>
+                                    <div class="line-span" id="line-two"></div>
+                                    <div class="line-span" id="line-four"></div>
+                                </div>
+                            </div>
+                            <div class="col-8" id="about-content-col">
+                                <div class="accordion" id="about-accordion">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h5 class="mb-0">
+                                                <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    Background
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#about-accordion">
+                                            <div class="card-body">
+                                                <p>I am a full stack developer located in Santa Monica, California experienced in JavaScript, React, Express, Node, MongoDB, and more with a background in sales, operations, and customer service. I enjoy coding because it allows me to create something from nothing. I am passionate about designing, learning frameworks, libraries, languages, and building apps to grow as a developer.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingTwo">
+                                            <h5 class="mb-0">
+                                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    Skills
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#about-accordion">
+                                            <div class="card-body">
+                                                <div id="skills-wrapper">
+                                                    <ul id="skills1">
+                                                        <li>HTML5</li>
+                                                        <li>CSS3</li>
+                                                        <li>JavaScript</li>
+                                                        <li>Bootstrap</li>
+                                                        <li>jQuery</li>
+                                                        <li>React.js</li>
+                                                        <li>Redux</li>
+                                                        <li>Node</li>
+                                                        <li>MongoDB</li>
+                                                        <li>RESTful APIs</li>
+                                                    </ul>
+                                                    <ul id="skills2">
+                                                        <li>Express</li>
+                                                        <li>Passport.js</li>
+                                                        <li>bcrypt</li>
+                                                        <li>Git</li>
+                                                        <li>npm</li>
+                                                        <li>Mocha</li>
+                                                        <li>Chai</li>
+                                                        <li>Jest</li>
+                                                        <li>Enzyme</li>
+                                                        <li>Travic CI</li>
+                                                    </ul>
+                                                </div>
+                                                <ul id="skills3">
+                                                    <li>Mobile-First Development</li>
+                                                    <li>Responsive Web Design</li>
+                                                    <li>Cross-Browser Compatibility</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                            <h5 class="mb-0">
+                                                <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    Interests
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#about-accordion">
+                                            <div class="card-body">
+                                                <ul>
+                                                    <li>Soccer</li>
+                                                    <li>Golf</li>
+                                                    <li>Movies & TV</li>
+                                                    <li>Fitness</li>
+                                                    <li>Gaming</li>
+                                                    <li>Cooking</li>
+                                                    <li>Nature</li>
+                                                    <li>Football</li>
+                                                    <li>Meditation</li>
+                                                    <li>Travel</li>
+                                                    <li>Volleyball</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- End About Container -->
+                </div>
+                <div class="carousel-item">
+                    <div class="container" id="contact">
+                        <div class="row">
+                            <div class="col-4 title-text" id="contact-title">
+                                <span class="vertical-text">Contact<span style="color: #f28d30">.</span></span>
+                                <div id="line-span-container">
+                                    <div class="line-span" id="line-two"></div>
+                                    <div class="line-span" id="line-three"></div>
+                                    <div class="line-span" id="line-four"></div>
+                                    <div class="line-span" id="line-one"></div>
+                                </div>
+                            </div>
+                            <div class="col-8" id="contact-col">
+                                <ul class="contact-info">
+                                    <li class="mail">
+                                        <p>Email</p><a href="mailto:smuyesser@gmail.com"><img class="contact-img" src="images/email.png" /></a>
+                                    </li>
+                                    <li class="linkedin">
+                                        <p>Linkedin</p><a href="https://www.linkedin.com/in/sinan-muyesser-1a8aa246/"><img class="contact-img" src="images/linkedin.png" /></a>
+                                    </li>
+                                    <li class="github">
+                                        <p>Github</p><a href="https://github.com/smuyesser"><img class="contact-img" src="images/github.png" /></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <!-- End Contact Container -->
                 </div>
             </div>
-        </div> <!-- End Landing Container -->
-        <div class="container m-0" id="portfolio">
-            <div class="row">
-                <div class="col-4 title-text" id="portfolio-title">
-                    <span class="vertical-text">Portfolio<span style="color: #f28d30">.</span></span>
-                    <div id="line-span-container">
-                        <div class="line-span" id="line-four"></div>
-                        <div class="line-span" id="line-three"></div>
-                        <div class="line-span" id="line-two"></div>
-                        <div class="line-span" id="line-one"></div>
-                    </div>
-                </div>
-                <div class="col-8" id="gallery-col">
-                    <div id="gallery">
-                        <div class="gallery-item" id="gallery-item-1">
-                            <div class="gallery-item-inner">
-                                <img src="images/pizza.png">
-                                <div class="gallery-item-title">
-                                    <span class="gallery-vertical-text">Hungry?</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" id="gallery-item-2">
-                            <div class="gallery-item-inner">
-                                <img src="images/videographer.png">
-                                <div class="gallery-item-title">
-                                    <span class="gallery-vertical-text">The Video Shelf?</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" id="gallery-item-3">
-                            <div class="gallery-item-inner">
-                                <img src="images/gaming-controller.png">
-                                <div class="gallery-item-title">
-                                    <span class="gallery-vertical-text">FIFA Formations</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="gallery-item" id="gallery-item-4">
-                            <div class="gallery-item-inner">
-                                <img src="images/andaction.png">
-                                <div class="gallery-item-title">
-                                    <span class="gallery-vertical-text">The Movie Game</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- End Portfolio Container -->
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
         <div class="container m-0 full-screen-gallery-item hidden" id="hungry">
             <div class="row col-12">
                 <button><img src="images/x.png" alt="close"></button>
@@ -159,133 +306,6 @@
                 <p class="tech-list">HTML, CSS, JavaScript, axios, ReactJS, Redux, Node.js, npm, Express, handlebars, MongoDB, mongoose, Passport.js, Netlify, Heroku, Mocha, Chai, Travis CI</p>
             </div>
         </div>
-        <div class="container" id="about">
-            <div class="row">
-                <div class="col-4 title-text" id="about-title">
-                    <span class="vertical-text">About<span style="color: #f28d30">.</span></span>
-                    <div id="line-span-container">
-                        <div class="line-span" id="line-three"></div>
-                        <div class="line-span" id="line-one"></div>
-                        <div class="line-span" id="line-two"></div>
-                        <div class="line-span" id="line-four"></div>
-                    </div>
-                </div>
-                <div class="col-8" id="about-content-col">
-                    <div class="accordion" id="about-accordion">
-                        <div class="card">
-                            <div class="card-header" id="headingOne">
-                                <h5 class="mb-0">
-                                    <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        Background
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#about-accordion">
-                                <div class="card-body">
-                                    <p>I am a full stack developer located in Santa Monica, California experienced in JavaScript, React, Express, Node, MongoDB, and more with a background in sales, operations, and customer service. I enjoy coding because it allows me to create something from nothing. I am passionate about designing, learning frameworks, libraries, languages, and building apps to grow as a developer.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingTwo">
-                                <h5 class="mb-0">
-                                    <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Skills
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#about-accordion">
-                                <div class="card-body">
-                                    <div id="skills-wrapper">
-                                    <ul id="skills1">
-                                        <li>HTML5</li>
-                                        <li>CSS3</li>
-                                        <li>JavaScript</li>
-                                        <li>Bootstrap</li>
-                                        <li>jQuery</li>
-                                        <li>React.js</li>
-                                        <li>Redux</li>
-                                        <li>Node</li>
-                                        <li>MongoDB</li>
-                                        <li>RESTful APIs</li>
-                                    </ul>
-                                    <ul id="skills2">
-                                        <li>Express</li>
-                                        <li>Passport.js</li>
-                                        <li>bcrypt</li>
-                                        <li>Git</li>
-                                        <li>npm</li>
-                                        <li>Mocha</li>
-                                        <li>Chai</li>
-                                        <li>Jest</li>
-                                        <li>Enzyme</li>
-                                        <li>Travic CI</li>
-                                    </ul>
-                                </div>
-                                <ul id="skills3">
-                                    <li>Mobile-First Development</li>
-                                    <li>Responsive Web Design</li>
-                                    <li>Cross-Browser Compatibility</li>
-                                </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="headingThree">
-                                <h5 class="mb-0">
-                                    <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Interests
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#about-accordion">
-                                <div class="card-body">
-                                    <ul>
-                                        <li>Soccer</li>
-                                        <li>Golf</li>
-                                        <li>Movies & TV</li>
-                                        <li>Fitness</li>
-                                        <li>Gaming</li>
-                                        <li>Cooking</li>
-                                        <li>Nature</li>
-                                        <li>Football</li>
-                                        <li>Meditation</li>
-                                        <li>Travel</li>
-                                        <li>Volleyball</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- End About Container -->
-        <div class="container" id="contact">
-            <div class="row">
-                <div class="col-4 title-text" id="contact-title">
-                    <span class="vertical-text">Contact<span style="color: #f28d30">.</span></span>
-                    <div id="line-span-container">
-                        <div class="line-span" id="line-two"></div>
-                        <div class="line-span" id="line-three"></div>
-                        <div class="line-span" id="line-four"></div>
-                        <div class="line-span" id="line-one"></div>
-                    </div>
-                </div>
-                <div class="col-8" id="contact-col">
-                    <ul class="contact-info">
-                        <li class="mail">
-                            <p>Email</p><a href="mailto:smuyesser@gmail.com"><img class="contact-img" src="images/email.png" /></a>
-                        </li>
-                        <li class="linkedin">
-                            <p>Linkedin</p><a href="https://www.linkedin.com/in/sinan-muyesser-1a8aa246/"><img class="contact-img" src="images/linkedin.png" /></a>
-                        </li>
-                        <li class="github">
-                            <p>Github</p><a href="https://github.com/smuyesser"><img class="contact-img" src="images/github.png" /></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div> <!-- End Contact Container -->
     </main>
     <footer class="w-100">
         <p class="mb-1">&copy; 2019 Sinan Muyesser</p>
