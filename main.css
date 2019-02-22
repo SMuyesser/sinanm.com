@@ -97,10 +97,15 @@ body {
   z-index: 5;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-  background-color: red;
+.carousel-control-prev span, .carousel-control-next span {
+  display: flex;
+}
+
+.carousel-control-prev img, .carousel-control-next img {
   position: absolute;
   bottom: 5px;
+  height: 20px;
+  width: 20px;
 }
 
 
