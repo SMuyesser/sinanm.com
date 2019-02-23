@@ -404,6 +404,7 @@ body {
     width: 100%;
     text-align: center;
     margin-top: 45px;
+    margin-bottom: 0px;
 }
 
 .full-screen-gallery-item p.short-info {
@@ -414,9 +415,8 @@ body {
 .full-screen-gallery-item img.app-img {
     max-width: 100%;
     height: 180px;
-    margin: 20px 0px;
+    margin: 10px 0px 0px 0px;
     padding: auto 10px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .list-group {
@@ -436,17 +436,17 @@ body {
 .list-group a.active {
   background-color: #32313F;
   border: 1px solid rgba(0,0,0,.125);
-
 }
 
 .tab-pane {
   background-color: #32313F;
-  color: #F28D30;
+  color: #CCC;
   padding: 5px;
   height: 145px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .full-screen-gallery-item p.app-description {
