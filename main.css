@@ -97,10 +97,6 @@ body {
   z-index: 5;
 }
 
-.carousel-control-prev span, .carousel-control-next span {
-  display: flex;
-}
-
 .carousel-control-prev img, .carousel-control-next img {
   position: absolute;
   bottom: 5px;
@@ -384,6 +380,10 @@ body {
     overflow-y: auto;
 }
 
+.full-screen-gallery-item > .row {
+    height: 100%;
+}
+
 .full-screen-gallery-item button {
     position: absolute;
     top: 10px;
@@ -400,6 +400,7 @@ body {
 }
 
 .full-screen-gallery-item h1 {
+    font-family: 'Titillium Web', sans-serif;
     width: 100%;
     text-align: center;
     margin-top: 45px;
@@ -412,11 +413,39 @@ body {
 
 .full-screen-gallery-item img.app-img {
     max-width: 100%;
-    margin: 20px auto;
+    height: 180px;
+    margin: 20px 0px;
+    padding: auto 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.full-screen-gallery-item p.long-info {
+#list-tab {
+  display: flex;
+  flex-direction: row;
+  font-size: 17px;
+  height: 38px;
+}
+
+#list-tab a {
+  padding: 5px;
+  border-radius: 0px;
+  height: 100%;
+}
+
+.tab-pane {
+  background-color: #32313F;
+  color: #fff;
+  padding: 5px;
+  height: 145px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-screen-gallery-item p.app-description {
     width: 100%;
+    font-size: 12px;
+    margin-bottom: 0px;
 }
 
 .full-screen-gallery-item p.live-code-links {
@@ -429,7 +458,6 @@ body {
 
 .full-screen-gallery-item p.tech-list {
     width: 100%;
-    margin-bottom: 5px;
 }
 
 
@@ -461,7 +489,8 @@ body {
     padding: 5px 25px 0px 25px;
     background-color: #32313F;
     color: #fff;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2) width: 100%;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
     font-size: 12px;
     padding-bottom: 5px;
 }
