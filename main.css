@@ -428,13 +428,20 @@ body {
 
 .list-group a {
   padding: 5px;
-  border-radius: 0px;
+  border-radius: 0px!important;
   height: 100%;
+  background-color: #22212B;
+}
+
+.list-group a.active {
+  background-color: #32313F;
+  border: 1px solid rgba(0,0,0,.125);
+
 }
 
 .tab-pane {
   background-color: #32313F;
-  color: #fff;
+  color: #F28D30;
   padding: 5px;
   height: 145px;
   display: flex;
