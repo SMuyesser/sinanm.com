@@ -56,6 +56,6 @@ $('.gallery-item').on('click', function() {
 });
 
 $('.full-screen-gallery-item button').on('click', function() {
-	$(this).parent().parent().addClass('hidden');
+	$(this).parent().parent().parent().addClass('hidden');
 });
 
