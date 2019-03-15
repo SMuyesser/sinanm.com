@@ -455,8 +455,11 @@ body {
     margin-bottom: 0px;
 }
 
-.full-screen-gallery-item p.live-code-links {
+.full-screen-gallery-item .live-code-links {
     width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .full-screen-gallery-item p.made-with-title {
