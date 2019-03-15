@@ -460,14 +460,26 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 4px;
+}
+
+.full-screen-gallery-item .live-code-links a p {
+  margin-bottom: 0px;
+  text-decoration: none;
+  color: #CCC;
 }
 
 .full-screen-gallery-item p.made-with-title {
     width: 100%;
 }
 
-.full-screen-gallery-item p.tech-list {
-    width: 100%;
+.full-screen-gallery-item ul.tech-list {
+    list-style: none;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
 }
 
 
